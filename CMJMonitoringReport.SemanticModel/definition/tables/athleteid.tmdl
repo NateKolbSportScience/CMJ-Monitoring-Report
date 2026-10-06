@@ -1,0 +1,36 @@
+table athleteid
+	lineageTag: 6fa95fa4-489b-418c-9134-386956cd1273
+
+	column Name
+		dataType: string
+		lineageTag: 8fb4339d-b523-4c33-8050-519a0e1b8bf2
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Index.1'
+		dataType: int64
+		formatString: 0
+		lineageTag: 74dfe12b-9c54-4237-bd20-baa7a3db2344
+		summarizeBy: none
+		sourceColumn: Index.1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition athleteid = m
+		mode: import
+		source =
+				// One row per athlete for the bar-chart axes, taken from the CMJ table.
+				let
+				    Source = Table.SelectColumns(rtp_latestCMJ, {"Name", "athleteid.Index.1"}),
+				    Distinct = Table.Distinct(Source),
+				    Renamed = Table.RenameColumns(Distinct, {{"athleteid.Index.1", "Index.1"}}),
+				    Typed = Table.TransformColumnTypes(Renamed, {{"Name", type text}, {"Index.1", Int64.Type}})
+				in
+				    Typed
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

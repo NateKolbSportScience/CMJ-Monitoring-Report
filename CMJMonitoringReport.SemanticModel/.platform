@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "CMJMonitoringReport"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0b1e34c5-25c8-43af-a46d-3bffe9e5d6c7"
+  }
+}

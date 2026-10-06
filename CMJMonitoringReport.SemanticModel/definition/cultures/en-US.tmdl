@@ -1,0 +1,221 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "athleteid.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "athleteid",
+			          "ConceptualProperty": "Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Athlete": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.jh_cm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "JH (cm)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "JH (cm)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pp_bm_w_kg": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "PP/BM (W/kg)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PP/BM (W/kg)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.conc_asym_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Conc Asym (%)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Conc Asym (%)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ecc_asym_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Ecc Asym (%)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Ecc Asym (%)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ct_ms": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CT (ms)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CT (ms)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.stiffness_n_m": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Stiffness (N/m)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Stiffness (N/m)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ecc_rfd_n_s": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Ecc RFD (N/s)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Ecc RFD (N/s)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.tested_this_week": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Tested This Week"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "TESTED IN LAST 7 DAYS": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.flagged_athletes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Flagged Athletes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ATHLETES FLAGGED RED": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

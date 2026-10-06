@@ -1,0 +1,122 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "f19fe8a68fef48aa8c87",
+  "position": {
+    "x": 24,
+    "y": 84,
+    "z": 40,
+    "height": 50,
+    "width": 600,
+    "tabOrder": 40
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "READINESS",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Black",
+                      "fontSize": "15pt",
+                      "color": "#E3C770"
+                    }
+                  },
+                  {
+                    "value": "      ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#F1EEE2"
+                    }
+                  },
+                  {
+                    "value": "\u25cf ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "11pt",
+                      "color": "#6CC28A"
+                    }
+                  },
+                  {
+                    "value": "normal    ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#F1EEE2"
+                    }
+                  },
+                  {
+                    "value": "\u25cf ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "11pt",
+                      "color": "#F2C14E"
+                    }
+                  },
+                  {
+                    "value": "beyond SWC (0.5\u20131 SD)    ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#F1EEE2"
+                    }
+                  },
+                  {
+                    "value": "\u25cf ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "11pt",
+                      "color": "#F07167"
+                    }
+                  },
+                  {
+                    "value": ">1 SD worse",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#F1EEE2"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "left"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

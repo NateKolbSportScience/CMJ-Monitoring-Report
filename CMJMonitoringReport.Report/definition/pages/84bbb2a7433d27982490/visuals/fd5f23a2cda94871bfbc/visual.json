@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "fd5f23a2cda94871bfbc",
+  "position": {
+    "x": 24,
+    "y": 690,
+    "z": 45,
+    "height": 30,
+    "width": 1232,
+    "tabOrder": 45
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Readiness metrics: Dr. Matt Jordan's six (output: JH, PP/BM, positive impulse \u00b7 strategy: CT, Ecc RFD, CM depth)  \u00b7  Column layout inspired by Sport Horizon's \"Power BI for S&C Coaches\" tutorial (youtube.com/watch?v=ZMnDJSYdFX4)  \u00b7  Simulated data for education only",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "8pt",
+                      "color": "#BDBBA6"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

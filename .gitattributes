@@ -1,0 +1,5 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Power Query (M) files: show as Power Query on GitHub, not Mathematica/Wolfram
+*.m linguist-language=powerquery

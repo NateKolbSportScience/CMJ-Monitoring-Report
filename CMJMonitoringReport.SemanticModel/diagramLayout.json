@@ -1,0 +1,60 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 692.52361024883317,
+        "y": 311.92179139306944
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 396,
+            "y": 9
+          },
+          "nodeIndex": "athleteid",
+          "nodeLineageTag": "6fa95fa4-489b-418c-9134-386956cd1273",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 992.87168352191657,
+            "y": 165.4484420062517
+          },
+          "nodeIndex": "Metric Table",
+          "nodeLineageTag": "dc07a243-68b9-4965-8474-60933d58b2dd",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 25
+          },
+          "nodeIndex": "rtp_latestCMJ",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 69.8893139291081,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

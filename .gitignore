@@ -1,0 +1,9 @@
+# Power BI local files: cached data and per-machine settings
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# Never commit real athlete data. Keep your exports outside the repo or in one of these:
+data/
+exports/
+private/
+*.pbix

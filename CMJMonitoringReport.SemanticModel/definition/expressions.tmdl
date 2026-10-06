@@ -1,0 +1,21 @@
+expression DataFolder = "" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=false]
+	lineageTag: 3c52e8e0-53ea-4a53-827f-9374b825d4f0
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression AnonymizeNames = true meta [IsParameterQuery=true, Type="Logical", IsParameterQueryRequired=true]
+	lineageTag: 5dcbe9d6-ad67-4505-8a1d-1e750736fa62
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Logical
+
+expression ExportCulture = "en-US" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 03db74e6-c4fb-42f2-851e-f29395513fc3
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
