@@ -7,7 +7,7 @@ let
     Source = #table(
         type table [Athlete = text, Date = date, Note = text],
         {
-            {"athlete_01", #date(2026, 7, 20), "Example entry: training modified after the June-July slide"}
+            {"athlete_01", #date(2026, 7, 20), "Example: training modified"}
         })
 in
     Source

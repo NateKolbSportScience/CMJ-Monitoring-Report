@@ -28,7 +28,7 @@
               },
               "queryRef": "Metric Table.Flagged Athletes",
               "nativeQueryRef": "ATHLETES FLAGGED RED",
-              "displayName": "FLAGGED: OUTPUT + STRATEGY RED"
+              "displayName": "ATHLETES FLAGGED"
             }
           ]
         }

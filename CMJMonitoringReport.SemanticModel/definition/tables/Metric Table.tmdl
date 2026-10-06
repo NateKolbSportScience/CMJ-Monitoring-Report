@@ -1145,12 +1145,12 @@ table 'Metric Table'
 	measure 'Intervention Note' =
 			-- text for the intervention card: the athlete's entries in the Interventions table
 			VAR Athlete = SELECTEDVALUE('athleteid'[Name])
-			VAR Rows = FILTER(ALL('Interventions'), 'Interventions'[Athlete] = Athlete)
+			VAR Entries = FILTER(ALL('Interventions'), 'Interventions'[Athlete] = Athlete)
 			RETURN
 			    IF(
-			        ISEMPTY(Rows),
+			        ISEMPTY(Entries),
 			        "No interventions logged",
-			        CONCATENATEX(Rows, FORMAT('Interventions'[Date], "mmm d") & "  " & 'Interventions'[Note], UNICHAR(10), 'Interventions'[Date], ASC)
+			        CONCATENATEX(Entries, FORMAT('Interventions'[Date], "mmm d") & "  " & 'Interventions'[Note], UNICHAR(10), 'Interventions'[Date], ASC)
 			    )
 		displayFolder: Individual trend
 		lineageTag: b7a8a1fd-339f-403b-b3ff-7f5d9bdb57ab
