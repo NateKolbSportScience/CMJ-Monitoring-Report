@@ -1,9 +1,9 @@
 relationship cca689dd-b856-4479-917d-f78dcfddc962
 	joinOnDateBehavior: datePartOnly
-	fromColumn: rtp_latestCMJ.Date
+	fromColumn: 'CMJ Data'.Date
 	toColumn: LocalDateTable_9c6931d6-cf54-4ff5-a5ca-828788cf5b0e.Date
 
 relationship AutoDetected_c4976e3f-c0c6-4fe5-a2da-cfbe0cdc086a
-	fromColumn: rtp_latestCMJ.'athleteid.Index.1'
+	fromColumn: 'CMJ Data'.'athleteid.Index.1'
 	toColumn: athleteid.'Index.1'
 

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "c33be8c39e56be675fd5",
+  "name": "a5e0851e5f118c2dc73c",
   "position": {
     "x": 600,
-    "y": 396,
-    "z": 2100,
-    "height": 248,
+    "y": 404,
+    "z": 2500,
+    "height": 264,
     "width": 280,
-    "tabOrder": 2100
+    "tabOrder": 2500
   },
   "visual": {
     "visualType": "lineChart",
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "rtp_latestCMJ"
+                      "Entity": "CMJ Data"
                     }
                   },
                   "Property": "Date"
                 }
               },
-              "queryRef": "rtp_latestCMJ.Date",
+              "queryRef": "CMJ Data.Date",
               "nativeQueryRef": "Date",
               "active": true
             }
@@ -72,6 +72,21 @@
                       "Entity": "Metric Table"
                     }
                   },
+                  "Property": "CM Depth Team Normal"
+                }
+              },
+              "queryRef": "Metric Table.CM Depth Team Normal",
+              "nativeQueryRef": "CM Depth Team Normal",
+              "displayName": "Team normal"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metric Table"
+                    }
+                  },
                   "Property": "CM Depth SWC +"
                 }
               },
@@ -102,12 +117,31 @@
                       "Entity": "Metric Table"
                     }
                   },
-                  "Property": "CM Depth Amber"
+                  "Property": "CM Depth Flag"
                 }
               },
-              "queryRef": "Metric Table.CM Depth Amber",
-              "nativeQueryRef": "CM Depth Amber",
-              "displayName": "Beyond SWC"
+              "queryRef": "Metric Table.CM Depth Flag",
+              "nativeQueryRef": "CM Depth Flag",
+              "displayName": "Flagged test"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metric Table"
+                    }
+                  },
+                  "Property": "CM Depth Status"
+                }
+              },
+              "queryRef": "Metric Table.CM Depth Status",
+              "nativeQueryRef": "CM Depth Status",
+              "displayName": "Flag"
             },
             {
               "field": {
@@ -117,27 +151,12 @@
                       "Entity": "Metric Table"
                     }
                   },
-                  "Property": "CM Depth Red"
+                  "Property": "CM Depth Change"
                 }
               },
-              "queryRef": "Metric Table.CM Depth Red",
-              "nativeQueryRef": "CM Depth Red",
-              "displayName": ">1 SD worse"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Metric Table"
-                    }
-                  },
-                  "Property": "CM Depth Intervention"
-                }
-              },
-              "queryRef": "Metric Table.CM Depth Intervention",
-              "nativeQueryRef": "CM Depth Intervention",
-              "displayName": "Intervention"
+              "queryRef": "Metric Table.CM Depth Change",
+              "nativeQueryRef": "CM Depth Change",
+              "displayName": "Change vs normal"
             }
           ]
         }
@@ -149,7 +168,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "rtp_latestCMJ"
+                    "Entity": "CMJ Data"
                   }
                 },
                 "Property": "Date"
@@ -166,6 +185,38 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#BDBBA6'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "showTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -206,7 +257,18 @@
             "gridlineShow": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3E4A37'"
+                    }
+                  }
                 }
               }
             }
@@ -238,6 +300,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             },
@@ -335,24 +404,6 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F2C14E'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Metric Table.CM Depth Amber"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
                       "Value": "'#F07167'"
                     }
                   }
@@ -361,7 +412,7 @@
             }
           },
           "selector": {
-            "metadata": "Metric Table.CM Depth Red"
+            "metadata": "Metric Table.CM Depth Flag"
           }
         },
         {
@@ -371,7 +422,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#7FB7E6'"
+                      "Value": "'#E3C770'"
                     }
                   }
                 }
@@ -379,7 +430,7 @@
             }
           },
           "selector": {
-            "metadata": "Metric Table.CM Depth Intervention"
+            "metadata": "Metric Table.CM Depth Team Normal"
           }
         }
       ],
@@ -410,7 +461,7 @@
             "markerSize": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "5D"
                 }
               }
             }
@@ -434,6 +485,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
+                }
+              }
             }
           },
           "selector": {
@@ -445,7 +503,7 @@
             "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
                 }
               }
             },
@@ -460,6 +518,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'dashed'"
+                }
+              }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
                 }
               }
             }
@@ -473,7 +538,7 @@
             "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
                 }
               }
             },
@@ -488,6 +553,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'dashed'"
+                }
+              }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
                 }
               }
             }
@@ -535,7 +607,7 @@
             }
           },
           "selector": {
-            "metadata": "Metric Table.CM Depth Amber"
+            "metadata": "Metric Table.CM Depth Flag"
           }
         },
         {
@@ -543,160 +615,46 @@
             "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
                 }
               }
             },
             "showMarker": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "strokeShow": {
-              "expr": {
-                "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "markerShape": {
+            "lineStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "'circle'"
+                  "Value": "'dotted'"
                 }
               }
             },
-            "markerSize": {
+            "lineChartType": {
               "expr": {
                 "Literal": {
-                  "Value": "7D"
+                  "Value": "'smooth'"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Metric Table.CM Depth Red"
-          }
-        },
-        {
-          "properties": {
-            "strokeWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "showMarker": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "strokeShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "markerShape": {
-              "expr": {
-                "Literal": {
-                  "Value": "'triangle'"
-                }
-              }
-            },
-            "markerSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Metric Table.CM Depth Intervention"
+            "metadata": "Metric Table.CM Depth Team Normal"
           }
         }
       ]
     },
     "visualContainerObjects": {
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "title": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Countermovement depth (cm)'"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F1EEE2'"
-                    }
-                  }
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'left'"
+                  "Value": "false"
                 }
               }
             }
@@ -722,28 +680,90 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#26301F'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#4A5743'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

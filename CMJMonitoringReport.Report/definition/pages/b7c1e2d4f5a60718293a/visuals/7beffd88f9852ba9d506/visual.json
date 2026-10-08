@@ -3,11 +3,11 @@
   "name": "7beffd88f9852ba9d506",
   "position": {
     "x": 24,
-    "y": 396,
-    "z": 1900,
-    "height": 248,
+    "y": 404,
+    "z": 2100,
+    "height": 264,
     "width": 280,
-    "tabOrder": 1900
+    "tabOrder": 2100
   },
   "visual": {
     "visualType": "lineChart",
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "rtp_latestCMJ"
+                      "Entity": "CMJ Data"
                     }
                   },
                   "Property": "Date"
                 }
               },
-              "queryRef": "rtp_latestCMJ.Date",
+              "queryRef": "CMJ Data.Date",
               "nativeQueryRef": "Date",
               "active": true
             }
@@ -72,6 +72,21 @@
                       "Entity": "Metric Table"
                     }
                   },
+                  "Property": "CT Team Normal"
+                }
+              },
+              "queryRef": "Metric Table.CT Team Normal",
+              "nativeQueryRef": "CT Team Normal",
+              "displayName": "Team normal"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metric Table"
+                    }
+                  },
                   "Property": "CT SWC +"
                 }
               },
@@ -102,12 +117,12 @@
                       "Entity": "Metric Table"
                     }
                   },
-                  "Property": "CT Amber"
+                  "Property": "CT Flag"
                 }
               },
-              "queryRef": "Metric Table.CT Amber",
-              "nativeQueryRef": "CT Amber",
-              "displayName": "Beyond SWC"
+              "queryRef": "Metric Table.CT Flag",
+              "nativeQueryRef": "CT Flag",
+              "displayName": "Flagged test"
             },
             {
               "field": {
@@ -117,12 +132,31 @@
                       "Entity": "Metric Table"
                     }
                   },
-                  "Property": "CT Red"
+                  "Property": "CT Better"
                 }
               },
-              "queryRef": "Metric Table.CT Red",
-              "nativeQueryRef": "CT Red",
-              "displayName": ">1 SD worse"
+              "queryRef": "Metric Table.CT Better",
+              "nativeQueryRef": "CT Better",
+              "displayName": "Improved test"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metric Table"
+                    }
+                  },
+                  "Property": "CT Status"
+                }
+              },
+              "queryRef": "Metric Table.CT Status",
+              "nativeQueryRef": "CT Status",
+              "displayName": "Flag"
             },
             {
               "field": {
@@ -132,12 +166,12 @@
                       "Entity": "Metric Table"
                     }
                   },
-                  "Property": "CT Intervention"
+                  "Property": "CT Change"
                 }
               },
-              "queryRef": "Metric Table.CT Intervention",
-              "nativeQueryRef": "CT Intervention",
-              "displayName": "Intervention"
+              "queryRef": "Metric Table.CT Change",
+              "nativeQueryRef": "CT Change",
+              "displayName": "Change vs normal"
             }
           ]
         }
@@ -149,7 +183,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "rtp_latestCMJ"
+                    "Entity": "CMJ Data"
                   }
                 },
                 "Property": "Date"
@@ -166,6 +200,38 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#BDBBA6'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "showTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -206,7 +272,18 @@
             "gridlineShow": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3E4A37'"
+                    }
+                  }
                 }
               }
             }
@@ -238,6 +315,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             },
@@ -335,24 +419,6 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F2C14E'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Metric Table.CT Amber"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
                       "Value": "'#F07167'"
                     }
                   }
@@ -361,7 +427,7 @@
             }
           },
           "selector": {
-            "metadata": "Metric Table.CT Red"
+            "metadata": "Metric Table.CT Flag"
           }
         },
         {
@@ -371,7 +437,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#7FB7E6'"
+                      "Value": "'#6CC28A'"
                     }
                   }
                 }
@@ -379,7 +445,25 @@
             }
           },
           "selector": {
-            "metadata": "Metric Table.CT Intervention"
+            "metadata": "Metric Table.CT Better"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E3C770'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Metric Table.CT Team Normal"
           }
         }
       ],
@@ -410,7 +494,7 @@
             "markerSize": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "5D"
                 }
               }
             }
@@ -434,6 +518,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
+                }
+              }
             }
           },
           "selector": {
@@ -445,7 +536,7 @@
             "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
                 }
               }
             },
@@ -460,6 +551,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'dashed'"
+                }
+              }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
                 }
               }
             }
@@ -473,7 +571,7 @@
             "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
                 }
               }
             },
@@ -488,6 +586,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'dashed'"
+                }
+              }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
                 }
               }
             }
@@ -535,7 +640,7 @@
             }
           },
           "selector": {
-            "metadata": "Metric Table.CT Amber"
+            "metadata": "Metric Table.CT Flag"
           }
         },
         {
@@ -577,7 +682,7 @@
             }
           },
           "selector": {
-            "metadata": "Metric Table.CT Red"
+            "metadata": "Metric Table.CT Better"
           }
         },
         {
@@ -585,118 +690,46 @@
             "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
                 }
               }
             },
             "showMarker": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "strokeShow": {
-              "expr": {
-                "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "markerShape": {
+            "lineStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "'triangle'"
+                  "Value": "'dotted'"
                 }
               }
             },
-            "markerSize": {
+            "lineChartType": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "'smooth'"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Metric Table.CT Intervention"
+            "metadata": "Metric Table.CT Team Normal"
           }
         }
       ]
     },
     "visualContainerObjects": {
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "title": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Contraction time (ms)  \u00b7  lower is better'"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F1EEE2'"
-                    }
-                  }
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'left'"
+                  "Value": "false"
                 }
               }
             }
@@ -722,28 +755,90 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#26301F'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#4A5743'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

@@ -3,11 +3,11 @@
   "name": "b02a5261dd574efdbbbd",
   "position": {
     "x": 900,
-    "y": 390,
-    "z": 2400,
-    "height": 28,
+    "y": 496,
+    "z": 2800,
+    "height": 26,
     "width": 356,
-    "tabOrder": 2400
+    "tabOrder": 2800
   },
   "visual": {
     "visualType": "textbox",
@@ -19,23 +19,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "DAY-TO-DAY NOISE",
+                    "value": "Day-to-Day Noise (CV %)",
                     "textStyle": {
                       "fontFamily": "Segoe UI Black",
-                      "fontSize": "13pt",
+                      "fontSize": "11pt",
                       "color": "#E3C770"
-                    }
-                  },
-                  {
-                    "value": "   CV %",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
-                      "color": "#BDBBA6"
                     }
                   }
                 ],
-                "horizontalTextAlignment": "left"
+                "horizontalTextAlignment": "center"
               }
             ]
           }
@@ -43,32 +35,6 @@
       ]
     },
     "visualContainerObjects": {
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "title": [
         {
           "properties": {
@@ -101,28 +67,72 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1E2619'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

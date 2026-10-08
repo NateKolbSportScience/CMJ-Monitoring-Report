@@ -3,7 +3,14 @@
 **/.pbi/cache.abf
 
 # Never commit real athlete data. Keep your exports outside the repo or in one of these:
-data/
+data/*
+!data/PUT YOUR CSV EXPORTS HERE.txt
 exports/
 private/
 *.pbix
+
+# release zips built by tools/make_release.py
+dist/
+
+# editor leftovers
+.Rhistory

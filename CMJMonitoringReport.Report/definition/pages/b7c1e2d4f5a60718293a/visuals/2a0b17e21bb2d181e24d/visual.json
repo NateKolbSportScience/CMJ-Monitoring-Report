@@ -3,9 +3,9 @@
   "name": "2a0b17e21bb2d181e24d",
   "position": {
     "x": 24,
-    "y": 116,
+    "y": 106,
     "z": 1500,
-    "height": 248,
+    "height": 264,
     "width": 280,
     "tabOrder": 1500
   },
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "rtp_latestCMJ"
+                      "Entity": "CMJ Data"
                     }
                   },
                   "Property": "Date"
                 }
               },
-              "queryRef": "rtp_latestCMJ.Date",
+              "queryRef": "CMJ Data.Date",
               "nativeQueryRef": "Date",
               "active": true
             }
@@ -72,6 +72,21 @@
                       "Entity": "Metric Table"
                     }
                   },
+                  "Property": "JH Team Normal"
+                }
+              },
+              "queryRef": "Metric Table.JH Team Normal",
+              "nativeQueryRef": "JH Team Normal",
+              "displayName": "Team normal"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metric Table"
+                    }
+                  },
                   "Property": "JH SWC +"
                 }
               },
@@ -102,12 +117,12 @@
                       "Entity": "Metric Table"
                     }
                   },
-                  "Property": "JH Amber"
+                  "Property": "JH Flag"
                 }
               },
-              "queryRef": "Metric Table.JH Amber",
-              "nativeQueryRef": "JH Amber",
-              "displayName": "Beyond SWC"
+              "queryRef": "Metric Table.JH Flag",
+              "nativeQueryRef": "JH Flag",
+              "displayName": "Flagged test"
             },
             {
               "field": {
@@ -117,12 +132,31 @@
                       "Entity": "Metric Table"
                     }
                   },
-                  "Property": "JH Red"
+                  "Property": "JH Better"
                 }
               },
-              "queryRef": "Metric Table.JH Red",
-              "nativeQueryRef": "JH Red",
-              "displayName": ">1 SD worse"
+              "queryRef": "Metric Table.JH Better",
+              "nativeQueryRef": "JH Better",
+              "displayName": "Improved test"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metric Table"
+                    }
+                  },
+                  "Property": "JH Status"
+                }
+              },
+              "queryRef": "Metric Table.JH Status",
+              "nativeQueryRef": "JH Status",
+              "displayName": "Flag"
             },
             {
               "field": {
@@ -132,12 +166,12 @@
                       "Entity": "Metric Table"
                     }
                   },
-                  "Property": "JH Intervention"
+                  "Property": "JH Change"
                 }
               },
-              "queryRef": "Metric Table.JH Intervention",
-              "nativeQueryRef": "JH Intervention",
-              "displayName": "Intervention"
+              "queryRef": "Metric Table.JH Change",
+              "nativeQueryRef": "JH Change",
+              "displayName": "Change vs normal"
             }
           ]
         }
@@ -149,7 +183,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "rtp_latestCMJ"
+                    "Entity": "CMJ Data"
                   }
                 },
                 "Property": "Date"
@@ -166,6 +200,38 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#BDBBA6'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "showTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -206,7 +272,18 @@
             "gridlineShow": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3E4A37'"
+                    }
+                  }
                 }
               }
             }
@@ -238,6 +315,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             },
@@ -335,24 +419,6 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F2C14E'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Metric Table.JH Amber"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
                       "Value": "'#F07167'"
                     }
                   }
@@ -361,7 +427,7 @@
             }
           },
           "selector": {
-            "metadata": "Metric Table.JH Red"
+            "metadata": "Metric Table.JH Flag"
           }
         },
         {
@@ -371,7 +437,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#7FB7E6'"
+                      "Value": "'#6CC28A'"
                     }
                   }
                 }
@@ -379,7 +445,25 @@
             }
           },
           "selector": {
-            "metadata": "Metric Table.JH Intervention"
+            "metadata": "Metric Table.JH Better"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E3C770'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Metric Table.JH Team Normal"
           }
         }
       ],
@@ -410,7 +494,7 @@
             "markerSize": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "5D"
                 }
               }
             }
@@ -434,6 +518,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
+                }
+              }
             }
           },
           "selector": {
@@ -445,7 +536,7 @@
             "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
                 }
               }
             },
@@ -460,6 +551,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'dashed'"
+                }
+              }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
                 }
               }
             }
@@ -473,7 +571,7 @@
             "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
                 }
               }
             },
@@ -488,6 +586,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'dashed'"
+                }
+              }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
                 }
               }
             }
@@ -535,7 +640,7 @@
             }
           },
           "selector": {
-            "metadata": "Metric Table.JH Amber"
+            "metadata": "Metric Table.JH Flag"
           }
         },
         {
@@ -577,7 +682,7 @@
             }
           },
           "selector": {
-            "metadata": "Metric Table.JH Red"
+            "metadata": "Metric Table.JH Better"
           }
         },
         {
@@ -585,118 +690,46 @@
             "strokeWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
                 }
               }
             },
             "showMarker": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "strokeShow": {
-              "expr": {
-                "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "markerShape": {
+            "lineStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "'triangle'"
+                  "Value": "'dotted'"
                 }
               }
             },
-            "markerSize": {
+            "lineChartType": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "'smooth'"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Metric Table.JH Intervention"
+            "metadata": "Metric Table.JH Team Normal"
           }
         }
       ]
     },
     "visualContainerObjects": {
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "title": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Jump height (cm)'"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F1EEE2'"
-                    }
-                  }
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'left'"
+                  "Value": "false"
                 }
               }
             }
@@ -722,28 +755,90 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#26301F'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#4A5743'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

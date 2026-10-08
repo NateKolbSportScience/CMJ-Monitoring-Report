@@ -110,7 +110,7 @@ table LocalDateTable_9c6931d6-cf54-4ff5-a5ca-828788cf5b0e
 
 	partition LocalDateTable_9c6931d6-cf54-4ff5-a5ca-828788cf5b0e = calculated
 		mode: import
-		source = Calendar(Date(Year(MIN('rtp_latestCMJ'[Date])), 1, 1), Date(Year(MAX('rtp_latestCMJ'[Date])), 12, 31))
+		source = Calendar(Date(Year(MIN('CMJ Data'[Date])), 1, 1), Date(Year(MAX('CMJ Data'[Date])), 12, 31))
 
 	annotation __PBI_LocalDateTable = true
 

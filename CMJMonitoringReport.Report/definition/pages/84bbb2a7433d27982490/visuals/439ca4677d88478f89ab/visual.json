@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "439ca4677d88478f89ab",
   "position": {
-    "x": 24,
-    "y": 210,
+    "x": 24.316109422492403,
+    "y": 198.419452887538,
     "z": 44,
-    "height": 478,
-    "width": 600,
+    "height": 489.2401215805471,
+    "width": 619.5744680851064,
     "tabOrder": 44
   },
   "visual": {
@@ -29,6 +29,21 @@
               "queryRef": "athleteid.Name",
               "nativeQueryRef": "Athlete",
               "displayName": "Athlete"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metric Table"
+                    }
+                  },
+                  "Property": "Status Icon"
+                }
+              },
+              "queryRef": "Metric Table.Status Icon",
+              "nativeQueryRef": "Status Icon",
+              "displayName": " "
             },
             {
               "field": {
@@ -73,7 +88,7 @@
               },
               "queryRef": "Metric Table.Pos Impulse (N s)",
               "nativeQueryRef": "Pos Impulse (N s)",
-              "displayName": "Pos Impulse (N s)"
+              "displayName": "Pos Imp (N\u00b7s)"
             },
             {
               "field": {
@@ -98,12 +113,12 @@
                       "Entity": "Metric Table"
                     }
                   },
-                  "Property": "Ecc RFD (N/s)"
+                  "Property": "Ecc Dur (ms)"
                 }
               },
-              "queryRef": "Metric Table.Ecc RFD (N/s)",
-              "nativeQueryRef": "Ecc RFD (N/s)",
-              "displayName": "Ecc RFD (N/s)"
+              "queryRef": "Metric Table.Ecc Dur (ms)",
+              "nativeQueryRef": "Ecc Dur (ms)",
+              "displayName": "Ecc Dur (ms)"
             },
             {
               "field": {
@@ -223,6 +238,20 @@
               "expr": {
                 "Literal": {
                   "Value": "2D"
+                }
+              }
+            },
+            "imageHeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "imageWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "22D"
                 }
               }
             }
@@ -640,7 +669,7 @@
                           "Entity": "Metric Table"
                         }
                       },
-                      "Property": "colour Ecc RFD (N/s)"
+                      "Property": "colour Ecc Dur (ms)"
                     }
                   }
                 }
@@ -655,7 +684,7 @@
                 }
               }
             ],
-            "metadata": "Metric Table.Ecc RFD (N/s)"
+            "metadata": "Metric Table.Ecc Dur (ms)"
           }
         },
         {
@@ -695,7 +724,7 @@
             }
           },
           "selector": {
-            "metadata": "Metric Table.Ecc RFD (N/s)"
+            "metadata": "Metric Table.Ecc Dur (ms)"
           }
         },
         {
@@ -767,6 +796,36 @@
           "selector": {
             "metadata": "Metric Table.CM Depth (cm)"
           }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Metric Table"
+                        }
+                      },
+                      "Property": "colour Athlete Name"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "athleteid.Name"
+          }
         }
       ],
       "columnWidth": [
@@ -775,7 +834,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "88D"
+                  "Value": "84D"
                 }
               }
             }
@@ -789,7 +848,21 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "80D"
+                  "Value": "34D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Metric Table.Status Icon"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "72D"
                 }
               }
             }
@@ -803,7 +876,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "80D"
+                  "Value": "72D"
                 }
               }
             }
@@ -817,7 +890,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "80D"
+                  "Value": "72D"
                 }
               }
             }
@@ -831,7 +904,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "80D"
+                  "Value": "72D"
                 }
               }
             }
@@ -845,13 +918,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "80D"
+                  "Value": "72D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Metric Table.Ecc RFD (N/s)"
+            "metadata": "Metric Table.Ecc Dur (ms)"
           }
         },
         {
@@ -859,7 +932,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "80D"
+                  "Value": "72D"
                 }
               }
             }
@@ -958,5 +1031,121 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c00faba486471ca37839",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "athleteid"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "25a8396d9b9ed8997715",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metric Table"
+              }
+            },
+            "Property": "Status Icon"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3e28f08c7f04b8b72199",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metric Table"
+              }
+            },
+            "Property": "JH (cm)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4c343dc1b5dde192835e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metric Table"
+              }
+            },
+            "Property": "PP/BM (W/kg)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "23f5a3962df05820177d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metric Table"
+              }
+            },
+            "Property": "Pos Impulse (N s)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b3356c65ba4fd3a0b3d6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metric Table"
+              }
+            },
+            "Property": "CT (ms)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7e3e53ac2a42be92f704",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metric Table"
+              }
+            },
+            "Property": "Ecc Dur (ms)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a09c9636ad92a02e457e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metric Table"
+              }
+            },
+            "Property": "CM Depth (cm)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -8,16 +8,15 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["DataFolder", "AnonymizeNames", "ExportCulture", "rtp_latestCMJ", "athleteid", "Metric Table", "Interventions"]
+annotation PBI_QueryOrder = ["DataFolder","AnonymizeNames","ExportCulture","CMJ Data","athleteid","Metric Table"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table rtp_latestCMJ
+ref table 'CMJ Data'
 ref table DateTableTemplate_21cf602b-f3a0-41c4-92ed-513f6b5791e8
 ref table LocalDateTable_9c6931d6-cf54-4ff5-a5ca-828788cf5b0e
 ref table athleteid
 ref table 'Metric Table'
-ref table Interventions
 
 ref cultureInfo en-US
 

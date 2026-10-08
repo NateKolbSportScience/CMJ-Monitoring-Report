@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "80540fcf5fc71826c306",
   "position": {
-    "x": 24,
-    "y": 64,
-    "z": 1300,
+    "x": 312,
+    "y": 378,
+    "z": 2200,
     "height": 26,
-    "width": 1232,
-    "tabOrder": 1300
+    "width": 280,
+    "tabOrder": 2200
   },
   "visual": {
     "visualType": "textbox",
@@ -19,103 +19,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "\u25cf ",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "10pt",
-                      "color": "#F1EEE2"
-                    }
-                  },
-                  {
-                    "value": "test     ",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
-                      "color": "#F1EEE2"
-                    }
-                  },
-                  {
-                    "value": "\u25cf ",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "10pt",
-                      "color": "#F2C14E"
-                    }
-                  },
-                  {
-                    "value": "beyond SWC (0.5\u20131 SD worse)     ",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
-                      "color": "#F1EEE2"
-                    }
-                  },
-                  {
-                    "value": "\u25cf ",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "10pt",
-                      "color": "#F07167"
-                    }
-                  },
-                  {
-                    "value": ">1 SD worse     ",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
-                      "color": "#F1EEE2"
-                    }
-                  },
-                  {
-                    "value": "\u25b2 ",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "10pt",
-                      "color": "#7FB7E6"
-                    }
-                  },
-                  {
-                    "value": "intervention     ",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
-                      "color": "#F1EEE2"
-                    }
-                  },
-                  {
-                    "value": "\u2014 ",
+                    "value": "Eccentric Duration (ms)",
                     "textStyle": {
                       "fontFamily": "Segoe UI Black",
-                      "fontSize": "10pt",
+                      "fontSize": "11pt",
                       "color": "#E3C770"
-                    }
-                  },
-                  {
-                    "value": "athlete's normal     ",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
-                      "color": "#F1EEE2"
-                    }
-                  },
-                  {
-                    "value": "- - ",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "10pt",
-                      "color": "#BDBBA6"
-                    }
-                  },
-                  {
-                    "value": "SWC band (normal \u00b1 0.5 SD)",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "9pt",
-                      "color": "#F1EEE2"
                     }
                   }
                 ],
-                "horizontalTextAlignment": "left"
+                "horizontalTextAlignment": "center"
               }
             ]
           }
@@ -123,32 +35,6 @@
       ]
     },
     "visualContainerObjects": {
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "title": [
         {
           "properties": {
@@ -181,28 +67,72 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1E2619'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

@@ -68,48 +68,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "metric_table.conc_asym_": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Metric Table",
-			          "ConceptualProperty": "Conc Asym (%)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Conc Asym (%)": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "metric_table.ecc_asym_": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Metric Table",
-			          "ConceptualProperty": "Ecc Asym (%)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Ecc Asym (%)": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
 			    "metric_table.ct_ms": {
 			      "Definition": {
 			        "Binding": {
@@ -121,48 +79,6 @@ cultureInfo en-US
 			      "Terms": [
 			        {
 			          "CT (ms)": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "metric_table.stiffness_n_m": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Metric Table",
-			          "ConceptualProperty": "Stiffness (N/m)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Stiffness (N/m)": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "metric_table.ecc_rfd_n_s": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Metric Table",
-			          "ConceptualProperty": "Ecc RFD (N/s)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Ecc RFD (N/s)": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -204,7 +120,1360 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "ATHLETES FLAGGED RED": {
+			          "ATHLETES FLAGGED": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.status_icon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Status Icon"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "metric_table.pos_impulse_n_s": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Pos Impulse (N s)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Pos Imp (N·s)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ecc_dur_ms": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Ecc Dur (ms)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Ecc Dur (ms)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.cm_depth_cm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CM Depth (cm)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CM Depth (cm)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.jh_trend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "JH Trend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.jh_normal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "JH Normal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Normal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.jh_swc_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "JH SWC +"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SWC upper": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.jh_swc_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "JH SWC -"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SWC lower": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.jh_flag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "JH Flag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Flagged test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.jh_better": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "JH Better"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Improved test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.jh_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "JH Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Flag": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.jh_change": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "JH Change"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Change vs normal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pp_bm_trend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "PP/BM Trend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pp_bm_normal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "PP/BM Normal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Normal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pp_bm_swc_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "PP/BM SWC +"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SWC upper": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pp_bm_swc_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "PP/BM SWC -"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SWC lower": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pp_bm_flag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "PP/BM Flag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Flagged test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pp_bm_better": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "PP/BM Better"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Improved test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pp_bm_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "PP/BM Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Flag": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pp_bm_change": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "PP/BM Change"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Change vs normal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pos_impulse_trend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Pos Impulse Trend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pos_impulse_normal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Pos Impulse Normal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Normal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pos_impulse_swc_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Pos Impulse SWC +"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SWC upper": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pos_impulse_swc_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Pos Impulse SWC -"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SWC lower": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pos_impulse_flag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Pos Impulse Flag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Flagged test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pos_impulse_better": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Pos Impulse Better"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Improved test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pos_impulse_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Pos Impulse Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Flag": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pos_impulse_change": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Pos Impulse Change"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Change vs normal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ct_trend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CT Trend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ct_normal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CT Normal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Normal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ct_swc_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CT SWC +"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SWC upper": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ct_swc_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CT SWC -"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SWC lower": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ct_flag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CT Flag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Flagged test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ct_better": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CT Better"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Improved test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ct_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CT Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Flag": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ct_change": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CT Change"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Change vs normal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ecc_dur_trend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Ecc Dur Trend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ecc_dur_normal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Ecc Dur Normal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Normal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ecc_dur_swc_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Ecc Dur SWC +"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SWC upper": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ecc_dur_swc_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Ecc Dur SWC -"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SWC lower": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ecc_dur_flag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Ecc Dur Flag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Flagged test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ecc_dur_better": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Ecc Dur Better"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Improved test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ecc_dur_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Ecc Dur Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Flag": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ecc_dur_change": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Ecc Dur Change"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Change vs normal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.cm_depth_trend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CM Depth Trend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.cm_depth_normal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CM Depth Normal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Normal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.cm_depth_swc_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CM Depth SWC +"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SWC upper": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.cm_depth_swc_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CM Depth SWC -"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SWC lower": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.cm_depth_flag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CM Depth Flag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Flagged test": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.cm_depth_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CM Depth Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Flag": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.cm_depth_change": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CM Depth Change"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Change vs normal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ecc_asym_trend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Ecc Asym Trend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Eccentric braking": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.conc_asym_trend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Conc Asym Trend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Concentric": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.asym_guide_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Asym Guide +"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "+10%": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.asym_guide_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Asym Guide -"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "-10%": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.jh_cv_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "JH CV %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "JH": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pp_bm_cv_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "PP/BM CV %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PP/BM": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.pos_impulse_cv_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Pos Impulse CV %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Pos Imp": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ct_cv_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CT CV %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CT": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.ecc_dur_cv_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Ecc Dur CV %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Ecc Dur": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.cm_depth_cv_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "CM Depth CV %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Depth": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.readiness_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Readiness Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Status": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.readiness_points": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "Readiness Points"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Points (6+ caution, 10+ monitor)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.bw_trend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "BW Trend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Body weight": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metric_table.bw_normal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metric Table",
+			          "ConceptualProperty": "BW Normal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Normal": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

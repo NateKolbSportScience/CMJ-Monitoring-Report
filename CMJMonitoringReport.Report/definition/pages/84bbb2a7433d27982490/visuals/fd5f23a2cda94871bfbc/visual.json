@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Readiness metrics: Dr. Matt Jordan's six (output: JH, PP/BM, positive impulse \u00b7 strategy: CT, Ecc RFD, CM depth)  \u00b7  Column layout inspired by Sport Horizon's \"Power BI for S&C Coaches\" tutorial (youtube.com/watch?v=ZMnDJSYdFX4)  \u00b7  Simulated data for education only",
+                    "value": "Readiness metrics adapted from Dr. Matt Jordan's six (output: JH, PP/BM, positive impulse \u00b7 strategy: CT, ecc duration, CM depth)  \u00b7  Column layout inspired by Sport Horizon's \"Power BI for S&C Coaches\" tutorial (youtube.com/watch?v=ZMnDJSYdFX4)",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "8pt",
@@ -55,6 +55,40 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
                 }
               }
             }

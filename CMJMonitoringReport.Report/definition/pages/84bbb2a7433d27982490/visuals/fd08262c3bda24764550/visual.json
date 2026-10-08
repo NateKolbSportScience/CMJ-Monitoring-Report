@@ -81,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Vertical Velocity at Takeoff [m/s]'"
+                                "Value": "'Contraction Time [ms]'"
                               }
                             }
                           ]
@@ -298,7 +298,14 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Contraction time [ms]'"
+                          "Value": "'Contraction Time [ms]'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Eccentric Duration [ms]'"
                         }
                       }
                     ],
@@ -306,20 +313,6 @@
                       {
                         "Literal": {
                           "Value": "'Countermovement Depth [cm]'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Force at Zero Velocity [N]'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Vertical Velocity at Takeoff [m/s]'"
                         }
                       }
                     ]

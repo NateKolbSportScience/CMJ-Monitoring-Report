@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "84b07b195044d57db37b",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "a7c9e1b3d5f7a9c1e3b5",
   "position": {
-    "x": 447.33333333333331,
-    "y": 134,
-    "z": 10000,
-    "height": 64,
-    "width": 166.66666666666666,
-    "tabOrder": 10000
+    "x": 24,
+    "y": 22,
+    "z": 11500,
+    "height": 44,
+    "width": 200,
+    "tabOrder": 11500
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "rtp_latestCMJ"
+                      "Entity": "CMJ Data"
                     }
                   },
-                  "Property": "Date"
+                  "Property": "Season"
                 }
               },
-              "queryRef": "forcedecks-test-export-2026_03_01.Date",
-              "nativeQueryRef": "Date",
+              "queryRef": "CMJ Data.Season",
+              "nativeQueryRef": "Season",
               "active": true
             }
           ]
@@ -40,16 +40,15 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "rtp_latestCMJ"
+                    "Entity": "CMJ Data"
                   }
                 },
-                "Property": "Date"
+                "Property": "Season"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
     },
     "objects": {
@@ -59,7 +58,7 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Before'"
+                  "Value": "'Dropdown'"
                 }
               }
             }
@@ -69,62 +68,51 @@
       "general": [
         {
           "properties": {
-            "orientation": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "r",
+                    "Entity": "CMJ Data",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "r"
+                                }
+                              },
+                              "Property": "Season"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Latest season'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
         }
       ],
       "header": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'As of'"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#E3C770'"
-                    }
-                  }
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Segoe UI'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "slider": [
         {
           "properties": {
             "show": {
@@ -137,7 +125,7 @@
           }
         }
       ],
-      "date": [
+      "items": [
         {
           "properties": {
             "fontColor": {
@@ -148,6 +136,44 @@
                       "Value": "'#F1EEE2'"
                     }
                   }
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#26301F'"
+                    }
+                  }
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "singleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -242,6 +268,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "Season",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

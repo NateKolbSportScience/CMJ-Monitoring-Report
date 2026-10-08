@@ -1,0 +1,10 @@
+Put your CMJ exports (.csv) from VALD Hub or Hawkin Dynamics in this folder.
+
+- One file or many: every CSV in this folder (and any folders inside it) is loaded.
+- Each week, just save the new export here and click Refresh in your report.
+- Exports that overlap (the same tests in two files) are fine; duplicates are removed.
+
+The first time you open "CMJ Monitoring Report.pbit", it asks for DataFolder:
+paste this folder's path (click the address bar at the top of this window and copy it).
+
+This folder stays on your computer. Nothing in it is uploaded anywhere.

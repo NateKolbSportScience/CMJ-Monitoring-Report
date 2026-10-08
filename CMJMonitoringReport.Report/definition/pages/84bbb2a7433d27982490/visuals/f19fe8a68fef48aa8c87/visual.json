@@ -35,7 +35,7 @@
                     }
                   },
                   {
-                    "value": "\u25cf ",
+                    "value": "● ",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "11pt",
@@ -51,7 +51,7 @@
                     }
                   },
                   {
-                    "value": "\u25cf ",
+                    "value": "● ",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "11pt",
@@ -59,7 +59,7 @@
                     }
                   },
                   {
-                    "value": "beyond SWC (0.5\u20131 SD)    ",
+                    "value": "watch: meaningful drop    ",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "9pt",
@@ -67,7 +67,7 @@
                     }
                   },
                   {
-                    "value": "\u25cf ",
+                    "value": "● ",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "11pt",
@@ -75,7 +75,7 @@
                     }
                   },
                   {
-                    "value": ">1 SD worse",
+                    "value": "red: big drop",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "9pt",

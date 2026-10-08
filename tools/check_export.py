@@ -1,6 +1,6 @@
 """Checks a CMJ export (or a folder of them) against the report's import rules.
 
-Mirrors the Power Query in queries/rtp_latestCMJ.m: header normalisation, column aliases,
+Mirrors the Power Query in queries/CMJ Data.m: header normalisation, column aliases,
 CMJ-row filtering, unit conversion (inch ForceDecks exports and Hawkin Dynamics exports),
 asymmetry parsing and athlete IDs. Works for VALD ForceDecks and Hawkin Dynamics CSVs. Run it to see
 what the report will load before opening Power BI.
@@ -15,7 +15,7 @@ from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-QUERY = (ROOT / "queries" / "rtp_latestCMJ.m").read_text()
+QUERY = (ROOT / "queries" / "CMJ Data.m").read_text()
 SPEC = [(o, re.findall(r'"([^"]+)"', a), t) for o, a, t in re.findall(r'\{"([^"]+)", \{([^}]*)\}, "(\w+)"\}', QUERY)]
 
 
@@ -69,11 +69,37 @@ def read(p):
         k = key(h)
         keys.append(f"{k} #{i}" if k in seen else k)
         seen.append(k)
-    return [dict(zip(keys, r)) for r in rows[1:] if any(c.strip() for c in r)]
+    out = [dict(zip(keys, r)) for r in rows[1:] if any(c.strip() for c in r)]
+    return units(out, keys)
+
+
+def units(rows, keys):
+    """Hawkin exports without units in the headers: work the unit out from the file's typical value."""
+    import statistics
+    rules = {"jumpheight": lambda m: "m" if m < 1.5 else "in" if m < 28 else "cm",
+             "countermovementdepth": lambda m: "m" if m < 1.5 else "in" if m < 20 else "cm",
+             "timetotakeoff": lambda m: "s" if m < 5 else "ms",
+             "unweightingphase": lambda m: "s" if m < 5 else None,
+             "brakingphase": lambda m: "s" if m < 5 else None,
+             "systemweight": lambda m: "n" if m > 400 else "lb" if m > 140 else "kg"}
+    for col, rule in rules.items():
+        if col not in keys:
+            continue
+        vals = [abs(number(r.get(col))) for r in rows if number(r.get(col)) is not None]
+        u = rule(statistics.median(vals)) if vals else None
+        if u is None or f"{col}({u})" in keys:
+            continue
+        for r in rows:
+            r[f"{col}({u})"] = r.pop(col, None)
+    return rows
+
+
+REP_DROP_PERCENT = 10  # keep in step with RepDropPercent in queries/CMJ Data.m
 
 
 def load(folder: Path):
-    files = sorted(p for p in folder.rglob("*.csv") if not p.name.startswith("~$"))
+    folder = Path(str(folder).strip().strip('"'))
+    files = [folder] if folder.is_file() else sorted(p for p in folder.rglob("*.csv") if not p.name.startswith("~$"))
     rows = [r for f in files for r in read(f)]
     type_col = next((c for c in ("testtype", "type") if any(c in r for r in rows)), None)
     if type_col:
@@ -88,9 +114,11 @@ def load(folder: Path):
         o = {name: (CONVERT[t](r.get(resolved[name])) if resolved[name] else None) for name, _, t in SPEC}
         scale = lambda x, f: None if x is None else x * f
         if o["BW [KG]"] is None:
-            o["BW [KG]"] = scale(o["__SystemWeightN"], 1 / 9.81)
+            o["BW [KG]"] = scale(o["__SystemWeightN"], 1 / 9.81) if o["__SystemWeightN"] is not None else scale(o["__SystemWeightLb"], 1 / 2.20462)
         if o["Jump Height (Imp-Mom) (cm)"] is None:
             o["Jump Height (Imp-Mom) (cm)"] = scale(o["__JumpHeightIn"], 2.54) if o["__JumpHeightIn"] is not None else scale(o["__JumpHeightM"], 100)
+        if o["Eccentric Duration (ms)"] is None and o["__UnweightingS"] is not None and o["__BrakingPhaseS"] is not None:
+            o["Eccentric Duration (ms)"] = round((o["__UnweightingS"] + o["__BrakingPhaseS"]) * 1000)
         if o["Contraction Time (ms)"] is None and o["__TimeToTakeoffS"] is not None:
             o["Contraction Time (ms)"] = round(o["__TimeToTakeoffS"] * 1000)
         if o["Countermovement Depth [cm] "] is None:
@@ -112,14 +140,34 @@ def load(folder: Path):
     names = sorted({o["Name"] for o in out})
     ids = {n: i for i, n in enumerate(names, 1)}
     unique = {tuple(sorted((k, str(v)) for k, v in o.items())): o for o in out}
-    return files, resolved, list(unique.values()), ids
+    # one row per test, like the Group By step in the query: per session (athlete + date) drop reps more than
+    # REP_DROP_PERCENT below the session's best jump height, then average every metric over the rest
+    jh = "Jump Height (Imp-Mom) (cm)"
+    text_cols = {n for n, _, ty in SPEC if ty in ("text", "time", "date")}
+    groups = {}
+    for o in unique.values():
+        groups.setdefault((o["Name"], o["Date"]), []).append(o)
+    sessions, dropped = [], 0
+    for reps in groups.values():
+        best = max((r[jh] for r in reps if r[jh] is not None), default=None)
+        kept = reps if best is None else [r for r in reps if r[jh] is None or r[jh] >= best * (1 - REP_DROP_PERCENT / 100)]
+        dropped += len(reps) - len(kept)
+        s = {}
+        for k in kept[0]:
+            vals = [r[k] for r in kept if r.get(k) is not None]
+            s[k] = (vals[0] if vals else None) if k in text_cols else (sum(vals) / len(vals) if vals else None)
+        sessions.append(s)
+    load.reps, load.dropped = len(unique), dropped
+    return files, resolved, sessions, ids
 
 
 if __name__ == "__main__":
     folder = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "sample_data"
     files, resolved, out, ids = load(folder)
     print(f"Folder: {folder}\nFiles:  {', '.join(f.name for f in files) or 'none'}")
-    print(f"Loaded: {len(out)} CMJ tests, {len(ids)} athletes -> athlete_01 ... athlete_{len(ids):02d}")
+    w = max(2, len(str(len(ids))))
+    print(f"Reps:   {load.reps} rows, {load.dropped} dropped (more than {REP_DROP_PERCENT}% below that session's best jump)")
+    print(f"Loaded: {len(out)} CMJ tests (reps averaged per session), {len(ids)} athletes -> athlete_{1:0{w}d} ... athlete_{len(ids):0{w}d}")
     if out:
         dates = [o["Date"] for o in out]
         print(f"Dates:  {min(dates)} to {max(dates)}")
