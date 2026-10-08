@@ -25,11 +25,12 @@ from datetime import date, timedelta
 from pathlib import Path
 
 SEED = 2026
-OUT_SIZE = 0.06      # Athlete A: output drop at the worst point
-ASYM_SIZE = 10       # Athlete A: extra braking asymmetry (percentage points)
-CT_SIZE = 0.06       # Athlete A: slower contraction time at the worst point
+OUT_SIZE = 0.08      # Athlete A: output drop at the worst point
+ASYM_SIZE = 12       # Athlete A: extra braking asymmetry (percentage points)
+CT_SIZE = 0.10       # Athlete A: slower contraction time at the worst point
 CASE_SEED = 4         # noise stream for the case athlete (illustrative demo)
-DEPTH_SIZE = 0.04    # Athlete A: shallower countermovement at the worst point
+CASE_NOISE = 0.6     # Athlete A: test-to-test noise relative to the team, so the case reads clearly
+DEPTH_SIZE = 0.08    # Athlete A: shallower countermovement at the worst point
 G = 9.81
 OUT = Path(__file__).resolve().parent.parent / "sample_data" / "forcedecks_cmj_demo.csv"
 OUT_HAWKIN = OUT.with_name("hawkin_cmj_demo.csv")
@@ -43,7 +44,7 @@ HAWKIN_HEADERS = ["Athlete", "Test Type", "Date", "Time", "System Weight(N)", "J
 
 CASE_NAME = "Demo Athlete 01"            # Athlete A - simulated patellar tendon case
 CASE_ASYM_START = date(2026, 5, 4)      # braking asymmetry starts to build (loading one leg more)
-CASE_ASYM_FULL = date(2026, 6, 8)       # asymmetry fully developed
+CASE_ASYM_FULL = date(2026, 6, 22)       # asymmetry fully developed
 CASE_SLIDE_START = date(2026, 5, 18)     # output and strategy start to slip
 CASE_PEAK = date(2026, 6, 29)            # worst point (end of June)
 CASE_INTERVENTION = date(2026, 7, 20)    # training adjusted, interventions added, IDT involved
@@ -133,6 +134,7 @@ def simulate(rng: random.Random):
         step = 14 if a["rtp"] else 7
         is_case = a["name"] == CASE_NAME
         r = case_rng if is_case else rng                               # the case athlete has his own noise stream
+        nz = CASE_NOISE if is_case else 1.0
         while d <= SEASON_END:
             if is_case or r.random() < a["attendance"]:
                 test_day = d + timedelta(days=0 if is_case else r.choice([0, 0, 1, 2]))
@@ -143,18 +145,18 @@ def simulate(rng: random.Random):
                 scale = season_effect(test_day) * (rtp_effect(weeks_in) if a["rtp"] else 1) * (1 - OUT_SIZE * load)
 
                 bw = a["bw"] + r.gauss(0, 0.5) - (0.6 if a["rtp"] and weeks_in < 6 else 0)
-                jh_in = a["jh_in"] * scale * (1 + r.gauss(0, 0.025))
+                jh_in = a["jh_in"] * scale * (1 + r.gauss(0, 0.025 * nz))
                 jh_m = jh_in * 0.0254
                 v_to = math.sqrt(2 * G * jh_m)                                   # impulse-momentum
-                depth_m = a["depth_cm"] / 100 * (1 + r.gauss(0, 0.06))
-                ct = a["ct_ms"] * (1 + r.gauss(0, 0.08)) * (1 + (0.12 * math.exp(-weeks_in / 6) if a["rtp"] else 0)) * (1 + CT_SIZE * load)
+                depth_m = a["depth_cm"] / 100 * (1 + r.gauss(0, 0.06 * nz))
+                ct = a["ct_ms"] * (1 + r.gauss(0, 0.08 * nz)) * (1 + (0.12 * math.exp(-weeks_in / 6) if a["rtp"] else 0)) * (1 + CT_SIZE * load)
                 depth_m *= 1 - DEPTH_SIZE * load                                       # shallower, stiffer-legged dip
                 conc_mean_f = bw * G + bw * v_to ** 2 / (2 * depth_m)             # work-energy over the push-off
                 f_zero_v = conc_mean_f * r.uniform(1.10, 1.18)
                 stiffness = f_zero_v / depth_m
                 ecc_rfd = (f_zero_v - bw * G) / (ct / 1000 * 0.45) * r.uniform(0.9, 1.1) * (1 - 0.12 * load)
                 # eccentric duration (start of movement to zero velocity) = part of contraction time, ~4% extra noise
-                ecc_dur = ct * ecc_share * (1 + ecc_rng.gauss(0, 0.04))
+                ecc_dur = ct * ecc_share * (1 + ecc_rng.gauss(0, 0.04 * nz))
                 unweight = ecc_dur * ecc_rng.uniform(0.42, 0.48)                 # Hawkin splits it into unweighting + braking
                 pos_impulse = bw * v_to * r.uniform(1.12, 1.18)
                 pp_bm = v_to * r.uniform(20.7, 21.2)
