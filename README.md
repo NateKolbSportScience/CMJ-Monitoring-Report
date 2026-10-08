@@ -78,6 +78,16 @@ The simulated demo data is built into the report, so there's nothing to set up.
 | `AnonymizeNames` | `true` shows `athlete_01, athlete_02 …` instead of names. Keep this on for screenshots and anything you share. |
 | `ExportCulture` | `en-US` for MM/DD/YYYY dates, `en-GB` / `en-AU` for DD/MM/YYYY. |
 
+### Troubleshooting
+
+| What you see | Why, and what to do |
+|---|---|
+| **"No CMJ exports found"** / *"Nothing to load at C:\…\data"* | DataFolder points at a folder (or file) with no CSV in it, often the empty `data` folder from the download. Save your VALD or Hawkin export into that folder and click **Refresh**. To see the built-in demo instead, clear **DataFolder** (Transform data → Edit parameters) and refresh. |
+| The demo still shows after you set DataFolder | The path is blank or wasn't applied. Re-paste it under **Edit parameters**, click **Apply changes**, then **Refresh**. |
+| A metric column is blank | That metric isn't in your export. Add it to your VALD Hub export template, or tick **Include Inactive Metrics** when exporting from Hawkin. |
+| Dates land in the wrong month | Switch **ExportCulture** between `en-US` and `en-GB`. |
+| "Some of the tables have incomplete or no data" | Click **Refresh now** on the yellow bar. Large exports sometimes need a second refresh. |
+
 ### VALD and Hawkin
 
 Both systems load into the same columns:

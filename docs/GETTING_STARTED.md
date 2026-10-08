@@ -111,7 +111,7 @@ That's it. Old exports can stay in the folder; tests that appear in more than on
 
 | What you see | What to do |
 |---|---|
-| "No CMJ exports found" | The path doesn't point at your CSV or the folder holding it. Copy the path again (step 4) and set it under **Transform data → Edit parameters → DataFolder**. |
+| "No CMJ exports found" / "Nothing to load at …\\data" | There's no CSV where DataFolder points, often because the `data` folder is still empty. Save your export into the `data` folder and click **Refresh**. If the path itself is wrong, copy it again (step 4) and set it under **Transform data → Edit parameters → DataFolder**. To see the built-in demo instead, clear DataFolder. |
 | A column is blank (often eccentric duration on VALD) | That metric isn't in your export. Add it to your VALD Hub export template and export again. |
 | Dates look wrong (tests in the wrong month) | Change **ExportCulture** under **Transform data → Edit parameters**. |
 | "Some of the tables have incomplete or no data" | Click **Refresh now** on the yellow bar. Big files sometimes need a second refresh. |
